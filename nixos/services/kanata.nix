@@ -9,14 +9,14 @@
         ];
         config = ''
           (defsrc
-            grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+            esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
             tab  q    w    e    r    t    y    u    i    o    p    [    ]    \    del
             caps a    s    d    f    g    h    j    k    l    ;    '    ret       pgup
             lsft z    x    c    v    b    n    m    ,    .    /    rsft      up   pgdn
             lctl lmet lalt           spc            ralt      rctl      left down rght)
 
           (deflayer qwerty
-            grv  1    2    3    4    5    6    7    8    9    0    -    =    \
+            esc  1    2    3    4    5    6    7    8    9    0    -    =    \
             tab  q    w    e    r    t    y    u    i    o    p    [    ]    bspc del
             @cap a    s    d    f    g    h    j    k    l    ;    '    ret       pgup
             lsft z    x    c    v    b    n    m    ,    .    /    rsft      up   pgdn
