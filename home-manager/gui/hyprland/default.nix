@@ -2,6 +2,10 @@
 , pkgs
 , ...
 }: {
+  imports = [
+    inputs.hyprland.homeManagerModules.default
+  ];
+
   programs = {
     wlogout.enable = true;
     rofi = {
@@ -12,8 +16,9 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
-    settings = import ./settings.nix;
+    # settings = import ./settings.nix;
+    extraConfig = builtins.readFile ./hyprland.conf;
   };
 }

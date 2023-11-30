@@ -1,10 +1,11 @@
-{ lib, ... }:
+{ lib, config, ... }:
 {
   services.xserver.videoDrivers = [ "nvidia" ];
-  nixpkgs.config.allowUnfree = true;
-  boot.kernelParams = [
-    "nvidia-drm.modeset=1"
-  ];
+  hardware = {
+    nvidia = {
+      modesetting.enable = true;
+    };
+  };
 
   nixpkgs.config = {
     allowUnfreePredicate = pkg:
@@ -14,5 +15,4 @@
         "nvidia-settings"
       ];
   };
-
 }
